@@ -1,0 +1,551 @@
+css_content = '''/* Emola Agent Controller - Style.css */
+:root {
+    --primary: #1a5fb4;
+    --primary-dark: #104a8e;
+    --secondary: #26a269;
+    --danger: #e01b24;
+    --warning: #ff7800;
+    --bg: #f6f8fc;
+    --card-bg: #ffffff;
+    --text: #1c1c1c;
+    --text-light: #5e5e5e;
+    --border: #d0d5dd;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --radius: 12px;
+    --success: #2ec27e;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    padding: 8px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.tab-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: var(--bg);
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 2px 8px rgba(26, 95, 180, 0.3);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.2s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card:nth-child(2) { border-left-color: var(--secondary); }
+.card:nth-child(3) { border-left-color: var(--warning); }
+.card:nth-child(4) { border-left-color: var(--danger); }
+
+.card h3 {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.card .valor {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.card .valor.alert {
+    color: var(--danger);
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.section-header h2 {
+    font-size: 1.4rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* Forms */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.1);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26, 95, 180, 0.3);
+}
+
+.btn-secondary {
+    background: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+    margin-left: 8px;
+}
+
+.btn-secondary:hover {
+    background: var(--border);
+}
+
+/* Tables */
+.table-container {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--bg);
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover {
+    background: rgba(26, 95, 180, 0.03);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-entrada {
+    background: rgba(46, 194, 126, 0.15);
+    color: var(--secondary);
+}
+
+.badge-saida {
+    background: rgba(224, 27, 36, 0.15);
+    color: var(--danger);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+    padding: 8px 12px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Report Filters */
+.report-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+/* Export Section */
+.export-section {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* Info Box */
+.info-box {
+    background: rgba(26, 95, 180, 0.05);
+    border: 1px solid rgba(26, 95, 180, 0.2);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info-box h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.info-box ul {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.info-box li {
+    margin-bottom: 6px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.close:hover {
+    color: var(--danger);
+}
+
+/* Action Buttons in Table */
+.btn-action {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-right: 4px;
+    transition: all 0.2s;
+}
+
+.btn-edit {
+    background: rgba(26, 95, 180, 0.1);
+    color: var(--primary);
+}
+
+.btn-edit:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-delete {
+    background: rgba(224, 27, 36, 0.1);
+    color: var(--danger);
+}
+
+.btn-delete:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .tabs {
+        gap: 4px;
+    }
+    
+    .tab-btn {
+        min-width: auto;
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filters {
+        width: 100%;
+    }
+    
+    .filters input,
+    .filters select {
+        flex: 1;
+    }
+    
+    th, td {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .export-section {
+        flex-direction: column;
+    }
+    
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
+
+/* Loading State */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-light);
+}
+
+.empty-state svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}'''
+
+with open('/mnt/agents/output/style.css', 'w', encoding='utf-8') as f:
+    f.write(css_content)
+
+print("style.css criado com sucesso!")
