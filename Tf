@@ -1,0 +1,753 @@
+🔥 PROMPT FINAL DEFINITIVO — SHOP ADMINISTRATOR
+
+Cria um sistema web profissional, moderno e altamente dinâmico chamado:
+
+Shop Administrator
+
+Sistema focado em:
+
+- Gestão de Loja
+- Gestão de Armazém
+- Gestão de Estoque
+- Gestão de Inventário
+- Controle Financeiro
+- Relatórios Inteligentes
+- Fluxo de Caixa
+- Controle de Combustível
+- Loja de Conveniência
+
+O sistema deve parecer um ERP moderno, rápido e inteligente, mas extremamente simples de usar.
+
+---
+
+⚠️ REGRAS CRÍTICAS (OBRIGATÓRIO)
+
+- NÃO usar nenhuma tecnologia que exija build
+- NÃO usar:
+  - Vite
+  - Webpack
+  - Node.js
+  - React
+  - Next.js
+  - Frameworks complexos
+- NÃO criar backend próprio
+- O sistema deve rodar diretamente no GitHub Pages
+- Deve funcionar apenas fazendo upload dos ficheiros
+- Usar apenas:
+  - HTML
+  - CSS
+  - JavaScript puro (ES Modules permitido)
+
+---
+
+⚠️ BASE DE DADOS
+
+Usar:
+
+Supabase via REST API ou CDN leve
+
+SEM SDK pesado.
+
+O sistema deve conectar diretamente ao Supabase pelo frontend.
+
+Criar ficheiro obrigatório:
+
+supabase.js
+
+Esse ficheiro deve conter:
+
+- URL do projeto
+- API KEY
+- Funções reutilizáveis:
+  - Inserir
+  - Buscar
+  - Atualizar
+  - Remover dados
+
+Tudo facilmente editável no GitHub.
+
+---
+
+🎯 OBJETIVO PRINCIPAL
+
+Permitir que o gestor:
+
+- Controle estoque
+- Controle armazém
+- Controle loja
+- Controle combustível
+- Controle inventário
+- Controle fluxo de caixa
+- Controle vendas
+- Gere relatórios automáticos
+- Visualize lucros em tempo real
+
+---
+
+🧠 ARQUITETURA DO PROJETO
+
+Ficheiros obrigatórios:
+
+- "index.html"
+- "style.css"
+- "app.js"
+- "supabase.js"
+- "formulas.js"
+
+Código deve ser:
+
+- Modular
+- Organizado
+- Leve
+- Profissional
+- Fácil de manter
+- Fácil de editar no GitHub
+
+---
+
+⛽ MÓDULO DE POSTO DE COMBUSTÍVEL
+
+Criar gestão de:
+
+- Gasolina
+- Diesel
+- Petróleo
+- Lubrificantes
+
+Funcionalidades:
+
+- Entrada de combustível
+- Saída/venda
+- Controle de litros
+- Controle de bombas
+- Controle diário de vendas
+- Relatórios automáticos
+- Lucro diário por combustível
+
+---
+
+🏪 MÓDULO DE LOJA
+
+Criar página:
+
+Loja
+
+Mostrar:
+
+- Produtos organizados por categoria
+- Quantidade disponível
+- Quantidade vendida
+- Preço unitário
+- Lucro por item
+- Valor total em estoque
+
+Categorias predefinidas:
+
+- Bebidas
+- Biscoitos
+- Automóveis
+- Higiene
+- Alimentos
+- Combustíveis
+- Diversos
+
+Permitir adicionar novas categorias.
+
+---
+
+🏬 MÓDULO DE ARMAZÉM
+
+Criar página:
+
+Armazém
+
+Mostrar:
+
+- Todos os produtos armazenados
+- Quantidade total
+- Preço de aquisição
+- Preço de venda
+- Lucro percentual
+- Última atualização
+
+Funcionalidades:
+
+- Entrada de estoque
+- Saída de estoque
+- Transferência para loja
+- Busca de produtos
+- Filtros por categoria
+
+Atualização automática após qualquer operação.
+
+---
+
+📦 MÓDULO DE INVENTÁRIO
+
+Criar página:
+
+Inventário
+
+Mostrar:
+
+Produtos no Armazém
+
+- Nome
+- Quantidade
+- Valor total
+
+Produtos na Loja
+
+- Nome
+- Quantidade
+- Valor total
+
+Totais Gerais
+
+- Quantidade total
+- Valor total do estoque
+- Produtos com estoque baixo
+
+Atualização automática em tempo real.
+
+---
+
+➕ PÁGINA: ADICIONAR PRODUTOS AO ARMAZÉM
+
+Criar página:
+
+Adicionar Produto
+
+Campos:
+
+- Nome do produto
+- Categoria
+- Quantidade
+- Preço de aquisição
+- Percentual de lucro
+- Preço de venda automático
+- Código automático
+
+Fórmula automática:
+
+precoVenda = precoAquisicao + (precoAquisicao * percentualLucro)
+
+Permitir:
+
+- Selecionar percentuais existentes
+- Criar novos percentuais
+
+---
+
+➕ PÁGINA: ADICIONAR PRODUTOS À LOJA
+
+Criar página:
+
+Transferir para Loja
+
+Funcionalidades:
+
+- Selecionar produtos do armazém
+- Transferir quantidades
+- Atualizar automaticamente:
+  - Armazém
+  - Loja
+  - Inventário
+
+---
+
+💰 CONTROLE DE LUCRO
+
+Criar ficheiro:
+
+formulas.js
+
+Responsável por:
+
+- Cálculo de lucro
+- Margem percentual
+- Valor de venda
+- Relatórios financeiros
+
+Tudo separado da interface.
+
+---
+
+📈 RELATÓRIOS AUTOMÁTICOS
+
+Gerar:
+
+- Diário
+- Semanal
+- Mensal
+- Trimestral
+
+Mostrar:
+
+- Total vendido
+- Lucro total
+- Lucro por categoria
+- Produtos mais vendidos
+- Fluxo de caixa
+
+Funcionalidades:
+
+- Encerrar operações do dia
+- Arquivar automaticamente
+- Reiniciar métricas diárias
+- Histórico completo pesquisável
+
+---
+
+📂 IMPORTAÇÃO MASSIVA DE DADOS
+
+Criar sistema inteligente de upload.
+
+O sistema deve aceitar:
+
+- CSV
+- XLSX
+- XLS
+- JSON
+- TXT
+- XML
+- ODS
+- TSV
+- PDF simples
+- DOCX tabelado
+
+O sistema deve:
+
+- Ler automaticamente os ficheiros
+- Detectar:
+  - Produto
+  - Quantidade
+  - Valor
+  - Categoria
+- Atualizar automaticamente:
+  - Estoque
+  - Loja
+  - Inventário
+  - Relatórios
+  - Fluxo de caixa
+
+---
+
+🤖 LEITOR INTELIGENTE
+
+Criar mecanismo automático para:
+
+- Detectar colunas
+- Corrigir pequenas diferenças de nomes
+- Validar dados antes da importação
+- Mostrar pré-visualização antes de confirmar
+
+---
+
+💾 ESTRUTURA DE DADOS (SUPABASE)
+
+Criar tabelas:
+
+- produtos
+- categorias
+- estoque
+- movimentacoes
+- vendas
+- relatorios
+- combustiveis
+
+Operações:
+
+- Inserção
+- Leitura
+- Atualização
+- Remoção
+
+---
+
+🎨 UI/UX
+
+- Mobile-first
+- Interface moderna
+- Dashboard profissional
+- Atualização em tempo real
+- Sem reload
+- Navegação rápida
+
+Menu principal:
+
+- Dashboard
+- Loja
+- Armazém
+- Inventário
+- Combustíveis
+- Relatórios
+- Configurações
+
+---
+
+⚡ EXPERIÊNCIA
+
+O sistema deve parecer um software empresarial profissional:
+
+- Fluido
+- Rápido
+- Leve
+- Moderno
+- Automatizado
+- Visualmente elegante
+
+---
+
+🚀 RESULTADO FINAL (OBRIGATÓRIO)
+
+Entregar:
+
+- Código completo
+- Ficheiros separados
+- Pronto para GitHub Pages
+- Sem build
+- Sem instalação
+- Sem dependências complexas
+- Funcionando apenas com upload
+
+---
+
+🔥 EXTRA
+
+- Código preparado para expansão futura
+- Estrutura profissional
+- Fácil manutenção
+- Fácil alteração das fórmulas financeiras
+- Sistema preparado para crescer futuramente
+
+
+🏬 MÓDULO DE ARMAZÉM
+
+Criar uma página exclusiva:
+"Armazém"
+
+Esta página deve:
+
+- Mostrar todos os produtos existentes no armazém
+- Atualizar automaticamente após qualquer operação
+
+Mostrar:
+
+- Nome do produto
+- Categoria
+- Quantidade atual
+- Preço de aquisição
+- Preço de venda
+- Percentual de lucro
+- Data da última atualização
+
+Funcionalidades:
+
+- Entrada de stock
+- Saída de stock
+- Transferência para loja
+- Atualização automática do inventário
+- Busca de produtos
+- Filtros por categoria
+
+---
+
+🏪 MÓDULO DA LOJA
+
+Criar página:
+"Loja"
+
+Esta página deve:
+
+- Mostrar produtos disponíveis na loja
+- Organizar por categorias
+
+Mostrar:
+
+- Quantidade disponível
+- Quantidade pendente
+- Preço unitário
+- Lucro por item
+- Valor total em stock
+
+Atualizações automáticas após:
+
+- Venda
+- Transferência
+- Entrada de novos produtos
+
+---
+
+➕ PÁGINA: ADICIONAR PRODUTOS AO ARMAZÉM
+
+Criar página específica:
+"Adicionar Produto ao Armazém"
+
+Campos:
+
+- Nome do produto
+- Categoria
+- Quantidade
+- Preço de aquisição
+- Percentual de lucro
+- Preço de venda automático
+- Código do produto gerado automaticamente
+
+Fórmula automática:
+
+precoVenda = precoAquisicao + (precoAquisicao * percentualLucro)
+
+O sistema deve permitir:
+
+- Selecionar percentuais já existentes
+- Criar novos percentuais
+
+---
+
+➕ PÁGINA: ADICIONAR PRODUTOS À LOJA
+
+Criar página específica:
+"Adicionar Produtos à Loja"
+
+Funcionalidades:
+
+- Selecionar produtos do armazém
+- Transferir quantidades para loja
+
+Atualizar automaticamente:
+
+- Armazém
+- Loja
+- Inventário
+
+---
+
+📦 MÓDULO DE INVENTÁRIO
+
+Criar página exclusiva:
+"Inventário"
+
+Mostrar:
+
+Produtos no Armazém
+
+- Nome
+- Quantidade
+- Valor total
+
+Produtos na Loja
+
+- Nome
+- Quantidade
+- Valor total
+
+Totais Gerais
+
+- Quantidade total
+- Valor total do stock
+- Produtos com baixo stock
+
+Atualização em tempo real.
+
+---
+
+🔄 SISTEMA AUTOMÁTICO DE STOCK
+
+Toda operação deve atualizar automaticamente:
+
+- Armazém
+- Loja
+- Inventário
+- Relatórios
+- Fluxo de caixa
+
+Sem recarregar página.
+
+---
+
+💵 CONTROLE DE PREÇOS E LUCRO
+
+Cada produto deve possuir:
+
+- Preço de aquisição
+- Percentual de lucro
+- Preço final automático
+
+O sistema deve:
+
+- Calcular lucro automaticamente
+- Permitir editar percentuais
+- Salvar fórmulas em:
+  "formulas.js"
+
+---
+
+📅 ENCERRAMENTO DE OPERAÇÕES DIÁRIAS
+
+Criar funcionalidade:
+"Encerrar Dia"
+
+Ao encerrar:
+
+- Gerar relatório automático
+- Arquivar operações do dia
+- Manter histórico completo
+- Reiniciar métricas diárias
+- NÃO apagar dados históricos
+
+---
+
+📂 IMPORTAÇÃO MASSIVA DE DADOS (MUITO IMPORTANTE)
+
+Criar sistema inteligente de upload de ficheiros.
+
+Objetivo:
+Permitir importar vendas e operações automaticamente.
+
+O sistema deve aceitar:
+
+- CSV
+- XLSX
+- XLS
+- JSON
+- TXT
+- XML
+- ODS
+- TSV
+- PDF simples tabelado
+- DOCX tabelado
+
+O sistema deve:
+
+- Ler automaticamente os ficheiros
+- Identificar:
+  - Produto
+  - Quantidade
+  - Valor
+
+Lançar automaticamente:
+
+- Vendas
+- Atualização de stock
+- Relatórios
+- Fluxo de caixa
+
+---
+
+🤖 LEITOR INTELIGENTE DE FICHEIROS
+
+Criar mecanismo automático para:
+
+- Detectar colunas
+- Corrigir pequenas diferenças de nomes
+- Validar dados antes de importar
+- Mostrar pré-visualização antes da confirmação
+
+---
+
+⚡ EXPERIÊNCIA DO SISTEMA
+
+O sistema deve funcionar como aplicação profissional:
+
+- Rápido
+- Fluido
+- Atualização em tempo real
+- Sem reload
+- Interface limpa
+- Mobile-first
+
+---
+
+🧠 IMPORTANTE
+
+Mesmo sendo frontend-only:
+
+- O sistema deve parecer um ERP profissional
+- Todas as páginas devem estar interligadas
+- Toda alteração deve refletir automaticamente em todo sistema
+- Código deve continuar simples e modular
+- Tudo pronto para GitHub Pages + Supabase
+
+
+Não totalmente.
+O prompt fala de:
+
+exportar dados
+
+importar ficheiros
+
+relatórios
+
+inventário
+
+
+Mas ele ainda não deixa explícito e obrigatório que o sistema deve:
+
+exportar inventário completo
+
+exportar inventário parcial
+
+exportar por categoria
+
+exportar em múltiplos formatos
+
+gerar relatórios de inventário automaticamente
+
+
+Adicione isto ao prompt:
+
+📤 EXPORTAÇÃO DE INVENTÁRIO (OBRIGATÓRIO)
+
+O sistema deve possuir uma funcionalidade completa de exportação de inventário.
+
+Criar opções para exportar:
+
+- Inventário completo
+- Inventário do armazém
+- Inventário da loja
+- Inventário por categoria
+- Produtos com baixo stock
+- Histórico de movimentações
+
+Formatos obrigatórios:
+
+- PDF
+- CSV
+- XLSX
+- JSON
+
+Cada exportação deve incluir:
+
+- Nome do produto
+- Categoria
+- Quantidade
+- Preço de aquisição
+- Preço de venda
+- Lucro estimado
+- Valor total em stock
+- Data da última atualização
+
+O sistema deve permitir:
+
+- Exportar por período
+- Exportar apenas produtos filtrados
+- Gerar relatórios imprimíveis
+- Download imediato do ficheiro
+
+A exportação deve refletir os dados em tempo real.
+
+---
+
+📑 RELATÓRIO INTELIGENTE DE INVENTÁRIO
+
+Criar relatórios automáticos mostrando:
+
+- Produtos mais vendidos
+- Produtos parados
+- Produtos com baixo stock
+- Valor total do armazém
+- Valor total da loja
+- Lucro potencial do stock atual
+
+Atualização automática após qualquer operação.
